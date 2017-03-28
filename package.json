@@ -1,0 +1,9 @@
+{
+  "name": "pgflagger",
+  "version": "1.0.0",
+  "description": "Web interface for managing feature flags",
+  "main": "index.js",
+  "repository": "http://github.com/plangrid/pgflagger",
+  "author": "Matt Long <matt.long@plangrid.com>",
+  "license": "MIT"
+}
