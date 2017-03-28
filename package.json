@@ -5,5 +5,40 @@
   "main": "index.js",
   "repository": "http://github.com/plangrid/pgflagger",
   "author": "Matt Long <matt.long@plangrid.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "wphelp": "webpack --help",
+    "dev:build": "babel src -d lib --ignore .test.js && babel-node tools/bundle-dev",
+    "dev:wdsbad": "webpack-dev-server --progress",
+    "dev:wds": "babel-node server",
+    "dev:serve": "python -mSimpleHTTPServer"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.23.0",
+    "bootstrap": "4.0.0-alpha.6",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.0",
+    "babel-core": "^6.24.0",
+    "babel-eslint": "^7.2.1",
+    "babel-loader": "^6.4.1",
+    "babel-plugin-flow-react-proptypes": "^0.21.0",
+    "babel-preset-env": "^1.2.2",
+    "babel-preset-flow": "^6.23.0",
+    "babel-preset-react": "^6.23.0",
+    "eslint": "^3.18.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-compat": "^1.0.2",
+    "eslint-plugin-flowtype": "^2.30.4",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^3.0.2 || ^4.0.0",
+    "eslint-plugin-react": "^6.9.0",
+    "flow-bin": "^0.42.0",
+    "husky": "^0.13.3",
+    "react-hot-loader": "next",
+    "webpack": "^2.3.2",
+    "webpack-dev-server": "^2.4.2"
+  }
 }
