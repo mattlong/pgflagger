@@ -9,8 +9,8 @@
   "scripts": {
     "wphelp": "webpack --help",
     "dev:build": "babel src -d lib --ignore .test.js && babel-node tools/bundle-dev",
-    "dev:wdsbad": "webpack-dev-server --progress",
-    "dev:wds": "babel-node server",
+    "dev:wds": "webpack-dev-server --progress",
+    "dev:wdsbad": "babel-node server",
     "dev:serve": "python -mSimpleHTTPServer"
   },
   "dependencies": {
