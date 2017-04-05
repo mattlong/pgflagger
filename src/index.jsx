@@ -2,6 +2,8 @@
 
 import 'babel-polyfill'
 
+import $ from 'jquery'
+import Tether from 'tether'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
@@ -11,6 +13,10 @@ import thunkMiddleware from 'redux-thunk'
 
 import App from './app'
 import { helloReducer } from './reducers'
+
+window.jQuery = $
+window.Tether = Tether
+require('bootstrap')
 
 const APP_CONTAINER_SELECTOR = '#js-react-app'
 

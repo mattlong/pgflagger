@@ -8,12 +8,16 @@ import HelloButtonAsync from './container/hello-button-async'
 import HelloMessageAsync from './container/hello-message-async'
 
 const App = () =>
-	<div>
-		<h1>Matt's awesome app</h1>
-		<HelloMessage />
-		<HelloButton />
-		<HelloMessageAsync />
-		<HelloButtonAsync />
+	<div className="container mt-4">
+		<div className="row">
+			<div className="col-12">
+				<h1>Page Title Goes here</h1>
+				<HelloMessage />
+				<HelloButton />
+				<HelloMessageAsync />
+				<HelloButtonAsync />
+			</div>
+		</div>
 	</div>
 
 export default App
