@@ -6,12 +6,15 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
 import { Provider } from 'react-redux'
-import { createStore, combineReducers } from 'redux'
+import { createStore, combineReducers, applyMiddleware, compose } from 'redux'
+import thunkMiddleware from 'redux-thunk'
 
 import App from './app'
 import { helloReducer } from './reducers'
 
 const APP_CONTAINER_SELECTOR = '#js-react-app'
+
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 
 const reducers = combineReducers({
 	hello: helloReducer,
@@ -19,7 +22,7 @@ const reducers = combineReducers({
 
 const store = createStore(
 	reducers,
-	window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+	composeEnhancers(applyMiddleware(thunkMiddleware))
 )
 
 const rootEl = document.querySelector(APP_CONTAINER_SELECTOR)
