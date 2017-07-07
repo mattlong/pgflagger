@@ -14,3 +14,15 @@ def hello(num):
         'serverMessage': 'Hello from the server! (received {})'.format(num)
     }
     return jsonify(resp)
+
+
+@app.route('/ajax/feature_flags')
+@crossdomain(origin='*')
+def feature_flags_list():
+    resp = {
+        'featureFlags': [
+            'FIRST_FLAG',
+            'SECOND_FLAG',
+        ]
+    }
+    return jsonify(resp)
